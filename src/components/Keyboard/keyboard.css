@@ -1,0 +1,414 @@
+.container-geral {
+  display: grid;
+  grid-template-rows: 3fr 1fr 6fr;
+  row-gap: 10px;
+  width: 80%;
+}
+
+.input-text {
+  background: transparent;
+  padding: 7px 15px;
+
+  font-size: 16px;
+
+  width: 95%;
+  justify-self: center;
+
+  color: #fff;
+  font-family: "Fira Code", monospace;
+
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  transition: all 0.2s;
+}
+
+.input-text::placeholder {
+  color: #ffffff;
+}
+
+.input-text:focus {
+  background: #fff;
+  color: #ff84b1;
+}
+
+.key-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  border-radius: 30px;
+
+  transition: 0.2s;
+}
+
+.firstline {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  width: 50px;
+  height: 50px;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.1s;
+}
+
+.text {
+  color: #878787;
+  padding: 0 0 5% 0;
+  width: 100%;
+  font-size: 20px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.textFocus {
+  color: #fff;
+  padding: 0 0 5% 0;
+  width: 100%;
+  font-size: 20px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.key-pressed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  background: #fff;
+  color: #ff84b1;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.1s;
+}
+
+.key:hover {
+  background: #fff;
+  color: #ff84b1;
+}
+
+.key-backspace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  width: 110px;
+  height: 50px;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.key-backspace:hover {
+  background: #fff;
+  color: #ff84b1;
+}
+
+.key-shift {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  width: 120px;
+  height: 50px;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.key-shift:hover {
+  background: #fff;
+  color: #ff84b1;
+}
+
+.key-capslock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  width: 100px;
+  height: 50px;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.key-capslock:hover {
+  background: #fff;
+  color: #ff84b1;
+}
+
+.key-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  width: 80px;
+  height: 50px;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.key-tab:hover {
+  background: #fff;
+  color: #ff84b1;
+}
+
+.key-backlash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  width: 80px;
+  height: 50px;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.key-backlash:hover {
+  background: #fff;
+  color: #ff84b1;
+}
+
+.key-backspace-pressed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  color: #ff84b1;
+
+  width: 110px;
+  height: 50px;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.key-backlash-pressed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  color: #ff84b1;
+
+  width: 80px;
+  height: 50px;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.key-windows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  width: 60px;
+  height: 50px;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.key-windows:hover {
+  background: #fff;
+  color: #ff84b1;
+}
+
+.key-ctrl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  width: 70px;
+  height: 50px;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.key-ctrl:hover {
+  background: #fff;
+  color: #ff84b1;
+}
+
+.key-ctrl-pressed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  color: #ff84b1;
+
+  width: 70px;
+  height: 50px;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.key-space {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  width: 58%;
+  height: 50px;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.key-space:hover {
+  background: #fff;
+  color: #ff84b1;
+}
+
+.key-space-pressed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  color: #ff84b1;
+
+  width: 58%;
+  height: 50px;
+
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
