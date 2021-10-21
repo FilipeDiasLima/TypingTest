@@ -52,7 +52,7 @@ export function ComponentsProvider({ children }: ComponentsProviderProps) {
   const [isOpenTheme, setIsOpenTheme] = useState(false);
 
   const [language, setLanguage] = useState('en');
-  const [theme, setTheme] = useState('pink');
+  const [theme, setTheme] = useState('light');
   const [count, setCount] = useState(4);
 
   const [hitsLocal, setHitsLocal] = useState<number>(0);
