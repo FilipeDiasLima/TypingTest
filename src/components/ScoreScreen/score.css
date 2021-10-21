@@ -1,0 +1,129 @@
+.screen-container-pink,
+.screen-container-light {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-container-pink {
+  background: linear-gradient(180deg, #ffbed7 0%, #f79dbe 30.24%, #ff84b1 100%);
+}
+
+.screen-container-light {
+  background: linear-gradient(
+    180deg,
+    #d2d2d2 0%,
+    #e2e2e2 0.01%,
+    #f2f2f2 50.24%,
+    #ffffff 99.2%
+  );
+}
+
+.score-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: "Fira Code", monospace;
+}
+
+.score-header-pink {
+  font-size: 24px;
+  color: #fff;
+}
+
+.score-header-light {
+  font-size: 24px;
+  color: #3b3b3b;
+}
+
+.score-close-button-left {
+  opacity: 0;
+  cursor: default;
+}
+
+.score-close-button {
+  display: flex;
+  padding: 10px 10px;
+  background: none;
+  border: 2.5px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 6px;
+  transition: 0.2s;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Fira Code", monospace;
+}
+
+.score-close-button:hover {
+  background: #fff;
+  color: #f79dbe;
+}
+
+.score-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.hits-miss {
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+  font-family: "Fira Code", monospace;
+}
+
+.span-chart-pink {
+  color: #fff;
+}
+
+.span-chart-light {
+  color: #3b3b3b;
+}
+
+.score-words {
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-size: 25px;
+  font-family: "Fira Code", monospace;
+  color: #fff;
+}
+
+@media (max-width: 1366px) {
+  .score-header {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .score-words {
+    max-width: 350px;
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  .hits-miss {
+    max-width: 300px;
+    padding: 15px;
+    font-size: 18px;
+  }
+}

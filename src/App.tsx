@@ -1,19 +1,30 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 import Header from './components/Header';
 import Keyboard from './components/Keyboard';
-import { ComponentsProvider } from './contexts/ComponentsContexts';
+import { ComponentsContexts, ComponentsProvider } from './contexts/ComponentsContexts';
 
 import './App.css';
 import './main.css';
 
-function App() {
-  const [theme, setTheme] = useState('pink');
+interface AppProps {
+  hitsTotal: number;
+  missTotal: number;
+  words: number;
+  score: number;
+}
+
+function App(props: AppProps) {
   
   return (
-    <ComponentsProvider>
-      <div className={theme}>
-        <Header />
+    <ComponentsProvider
+      hitsTotal={props.hitsTotal}
+      missTotal={props.missTotal}
+      words={props.words}
+      score={props.score}
+    >
+      <div>
+        <Header isHome={true}/>
         <main className='main-container'>
           <Keyboard />
         </main>

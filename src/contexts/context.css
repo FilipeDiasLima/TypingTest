@@ -1,0 +1,21 @@
+.app-pink,
+.app-light {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.app-pink {
+  background: linear-gradient(180deg, #ffbed7 0%, #f79dbe 30.24%, #ff84b1 100%);
+}
+
+.app-light {
+  background: linear-gradient(
+    180deg,
+    #d2d2d2 0%,
+    #e2e2e2 0.01%,
+    #f2f2f2 50.24%,
+    #ffffff 99.2%
+  );
+}

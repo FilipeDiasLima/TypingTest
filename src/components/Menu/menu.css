@@ -1,6 +1,6 @@
 .menu-container {
-  background: rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(20px);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -29,7 +29,8 @@
   height: 100%;
 }
 
-.menu-option {
+.menu-option-light,
+.menu-option-pink {
   display: flex;
   flex-direction: column;
   max-height: 180px;
@@ -40,31 +41,56 @@
   justify-content: center;
   align-items: center;
 
-  border: 2px solid #ffffff;
   box-sizing: border-box;
   border-radius: 20px;
 
   background: transparent;
 
   font-family: "Fira Code", monospace;
-  font-size: 25px;
   font-weight: 300;
-  color: #fff;
+  font-size: 25px;
 
   transition: 0.2s;
 }
 
-.menu-option svg {
+.menu-option-pink {
+  border: 2px solid #ffffff;
   color: #fff;
+}
+
+.menu-option-light {
+  border: 2px solid #3b3b3b;
+  color: #3b3b3b;
+}
+
+.menu-option-light svg,
+.menu-option-pink svg {
   font-size: 35px;
   transition: 0.2s;
 }
 
-.menu-option:hover {
+.menu-option-pink svg {
+  color: #fff;
+}
+
+.menu-option-light svg {
+  color: #3b3b3b;
+}
+
+.menu-option-pink:hover {
   background: #fff;
   color: #ff84b1;
 }
 
-.menu-option:hover svg {
+.menu-option-light:hover {
+  background: #3b3b3b;
+  color: #fff;
+}
+
+.menu-option-pink:hover svg {
   color: #ff84b1;
+}
+
+.menu-option-light:hover svg {
+  color: #fff;
 }

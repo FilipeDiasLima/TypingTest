@@ -5,7 +5,15 @@
   width: 80%;
 }
 
-.input-text {
+@media (max-width: 1440px) {
+  .container-geral {
+    grid-template-rows: 2fr 1fr 6fr;
+    width: 92%;
+  }
+}
+
+.input-text-light,
+.input-text-pink {
   background: transparent;
   padding: 7px 15px;
 
@@ -14,26 +22,44 @@
   width: 95%;
   justify-self: center;
 
-  color: #fff;
   font-family: "Fira Code", monospace;
 
-  border: 2px solid #fff;
   box-sizing: border-box;
   border-radius: 10px;
 
   transition: all 0.2s;
 }
 
-.input-text::placeholder {
+.input-text-pink {
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.input-text-light {
+  color: #3b3b3b;
+  border: 2px solid #3b3b3b;
+}
+
+.input-text-pink::placeholder {
   color: #ffffff;
 }
 
-.input-text:focus {
+.input-text-light::placeholder {
+  color: #3b3b3b;
+}
+
+.input-text-pink:focus {
   background: #fff;
   color: #ff84b1;
 }
 
-.key-container {
+.input-text-light:focus {
+  background: #3b3b3b;
+  color: #fff;
+}
+
+.key-container-pink,
+.key-container-light {
   display: flex;
   flex-direction: column;
 
@@ -41,11 +67,18 @@
   height: 100%;
   padding: 25px;
 
-  border: 2px solid #fff;
   box-sizing: border-box;
   border-radius: 30px;
 
   transition: 0.2s;
+}
+
+.key-container-pink {
+  border: 2px solid #fff;
+}
+
+.key-container-light {
+  border: 2px solid #3b3b3b;
 }
 
 .firstline {
@@ -57,17 +90,17 @@
   font-size: 15px;
 }
 
-.key {
+.key-pink,
+.key-light,
+.key-pressed-pink,
+.key-pressed-light {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  color: #fff;
-
   width: 50px;
   height: 50px;
 
-  border: 2px solid #ffffff;
   box-sizing: border-box;
   border-radius: 8px;
 
@@ -77,8 +110,39 @@
   transition: 0.1s;
 }
 
-.text {
+.key-pink {
+  color: #fff;
+  border: 2px solid #ffffff;
+}
+
+.key-light {
+  color: #3b3b3b;
+  border: 2px solid #3b3b3b;
+}
+
+.text-pink,
+.text-light {
+  padding: 0 0 5% 0;
+  width: 100%;
+  font-size: 20px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.text-pink {
   color: #878787;
+}
+
+.text-light {
+  color: #7d7d7d;
+}
+
+.textFocus-pink,
+.textFocus-light {
   padding: 0 0 5% 0;
   width: 100%;
   font-size: 20px;
@@ -90,56 +154,47 @@
   user-select: none;
 }
 
-.textFocus {
+.textFocus-pink {
   color: #fff;
-  padding: 0 0 5% 0;
-  width: 100%;
-  font-size: 20px;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none;
 }
 
-.key-pressed {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.textFocus-light {
+  color: #323232;
+}
 
-  width: 50px;
-  height: 50px;
-
+.key-pressed-pink {
   background: #fff;
   color: #ff84b1;
-
   border: 2px solid #ffffff;
-  box-sizing: border-box;
-  border-radius: 8px;
-
-  font-family: "Fira Code", monospace;
-  cursor: pointer;
-
-  transition: 0.1s;
 }
 
-.key:hover {
+.key-pressed-light {
+  background: #3b3b3b;
+  color: #fff;
+  border: 2px solid #3b3b3b;
+}
+
+.key-pink:hover {
   background: #fff;
   color: #ff84b1;
 }
 
-.key-backspace {
+.key-light:hover {
+  background: #3b3b3b;
+  color: #fff;
+}
+
+.key-backspace-pink,
+.key-backspace-light,
+.key-backspace-pressed-pink,
+.key-backspace-pressed-light {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  color: #fff;
 
   width: 110px;
   height: 50px;
 
-  border: 2px solid #ffffff;
   box-sizing: border-box;
   border-radius: 8px;
 
@@ -149,22 +204,35 @@
   transition: 0.2s;
 }
 
-.key-backspace:hover {
+.key-backspace-pink {
+  color: #fff;
+  border: 2px solid #ffffff;
+}
+
+.key-backspace-light {
+  color: #3b3b3b;
+  border: 2px solid #3b3b3b;
+}
+
+.key-backspace-pink:hover {
   background: #fff;
   color: #ff84b1;
 }
 
-.key-shift {
+.key-backspace-light:hover {
+  background: #3b3b3b;
+  color: #fff;
+}
+
+.key-shift-pink,
+.key-shift-light {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  color: #fff;
 
   width: 120px;
   height: 50px;
 
-  border: 2px solid #ffffff;
   box-sizing: border-box;
   border-radius: 8px;
 
@@ -174,22 +242,35 @@
   transition: 0.2s;
 }
 
-.key-shift:hover {
+.key-shift-pink {
+  color: #fff;
+  border: 2px solid #ffffff;
+}
+
+.key-shift-light {
+  color: #3b3b3b;
+  border: 2px solid #3b3b3b;
+}
+
+.key-shift-pink:hover {
   background: #fff;
   color: #ff84b1;
 }
 
-.key-capslock {
+.key-shift-light:hover {
+  background: #3b3b3b;
+  color: #fff;
+}
+
+.key-capslock-pink,
+.key-capslock-light {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  color: #fff;
 
   width: 100px;
   height: 50px;
 
-  border: 2px solid #ffffff;
   box-sizing: border-box;
   border-radius: 8px;
 
@@ -199,22 +280,35 @@
   transition: 0.2s;
 }
 
-.key-capslock:hover {
+.key-capslock-pink {
+  color: #fff;
+  border: 2px solid #ffffff;
+}
+
+.key-capslock-light {
+  color: #3b3b3b;
+  border: 2px solid #3b3b3b;
+}
+
+.key-capslock-pink:hover {
   background: #fff;
   color: #ff84b1;
 }
 
-.key-tab {
+.key-capslock-light:hover {
+  background: #3b3b3b;
+  color: #fff;
+}
+
+.key-tab-pink,
+.key-tab-light {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  color: #fff;
 
   width: 80px;
   height: 50px;
 
-  border: 2px solid #ffffff;
   box-sizing: border-box;
   border-radius: 8px;
 
@@ -224,22 +318,37 @@
   transition: 0.2s;
 }
 
-.key-tab:hover {
+.key-tab-pink {
+  color: #fff;
+  border: 2px solid #ffffff;
+}
+
+.key-tab-light {
+  color: #3b3b3b;
+  border: 2px solid #3b3b3b;
+}
+
+.key-tab-pink:hover {
   background: #fff;
   color: #ff84b1;
 }
 
-.key-backlash {
+.key-tab-light:hover {
+  background: #3b3b3b;
+  color: #fff;
+}
+
+.key-backlash-pink,
+.key-backlash-light,
+.key-backlash-pressed-pink,
+.key-backlash-pressed-light {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  color: #fff;
 
   width: 80px;
   height: 50px;
 
-  border: 2px solid #ffffff;
   box-sizing: border-box;
   border-radius: 8px;
 
@@ -249,64 +358,59 @@
   transition: 0.2s;
 }
 
-.key-backlash:hover {
-  background: #fff;
-  color: #ff84b1;
-}
-
-.key-backspace-pressed {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #fff;
-  color: #ff84b1;
-
-  width: 110px;
-  height: 50px;
-
-  border: 2px solid #ffffff;
-  box-sizing: border-box;
-  border-radius: 8px;
-
-  font-family: "Fira Code", monospace;
-  cursor: pointer;
-
-  transition: 0.2s;
-}
-
-.key-backlash-pressed {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #fff;
-  color: #ff84b1;
-
-  width: 80px;
-  height: 50px;
-
-  border: 2px solid #ffffff;
-  box-sizing: border-box;
-  border-radius: 8px;
-
-  font-family: "Fira Code", monospace;
-  cursor: pointer;
-
-  transition: 0.2s;
-}
-
-.key-windows {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+.key-backlash-pink {
   color: #fff;
+  border: 2px solid #ffffff;
+}
+
+.key-backlash-light {
+  color: #3b3b3b;
+  border: 2px solid #3b3b3b;
+}
+
+.key-backlash-pink:hover {
+  background: #fff;
+  color: #ff84b1;
+}
+
+.key-backlash-light:hover {
+  background: #3b3b3b;
+  color: #fff;
+}
+
+.key-backspace-pressed-pink {
+  background: #fff;
+  color: #ff84b1;
+  border: 2px solid #ffffff;
+}
+
+.key-backspace-pressed-light {
+  background: #3b3b3b;
+  color: #fff;
+  border: 2px solid #3b3b3b;
+}
+
+.key-backlash-pressed-pink {
+  background: #fff;
+  color: #ff84b1;
+  border: 2px solid #ffffff;
+}
+
+.key-backlash-pressed-light {
+  background: #3b3b3b;
+  color: #fff;
+  border: 2px solid #3b3b3b;
+}
+
+.key-windows-pink,
+.key-windows-light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 60px;
   height: 50px;
 
-  border: 2px solid #ffffff;
   box-sizing: border-box;
   border-radius: 8px;
 
@@ -316,22 +420,35 @@
   transition: 0.2s;
 }
 
-.key-windows:hover {
+.key-windows-pink {
+  color: #fff;
+  border: 2px solid #ffffff;
+}
+
+.key-windows-light {
+  color: #3b3b3b;
+  border: 2px solid #3b3b3b;
+}
+
+.key-windows-pink:hover {
   background: #fff;
   color: #ff84b1;
 }
 
-.key-ctrl {
+.key-windows-light:hover {
+  background: #3b3b3b;
+  color: #fff;
+}
+
+.key-ctrl-pink,
+.key-ctrl-light {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  color: #fff;
-
   width: 70px;
   height: 50px;
 
-  border: 2px solid #ffffff;
   box-sizing: border-box;
   border-radius: 8px;
 
@@ -341,9 +458,24 @@
   transition: 0.2s;
 }
 
-.key-ctrl:hover {
+.key-ctrl-pink {
+  color: #fff;
+  border: 2px solid #ffffff;
+}
+
+.key-ctrl-light {
+  color: #3b3b3b;
+  border: 2px solid #3b3b3b;
+}
+
+.key-ctrl-pink:hover {
   background: #fff;
   color: #ff84b1;
+}
+
+.key-ctrl-light:hover {
+  background: #3b3b3b;
+  color: #fff;
 }
 
 .key-ctrl-pressed {
@@ -367,48 +499,135 @@
   transition: 0.2s;
 }
 
-.key-space {
+.key-space-pink,
+.key-space-light,
+.key-space-pressed-pink,
+.key-space-pressed-light {
   display: flex;
   align-items: center;
   justify-content: center;
 
+  width: 58%;
+  height: 50px;
+
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.key-space-pink {
   color: #fff;
-
-  width: 58%;
-  height: 50px;
-
   border: 2px solid #ffffff;
-  box-sizing: border-box;
-  border-radius: 8px;
-
-  font-family: "Fira Code", monospace;
-  cursor: pointer;
-
-  transition: 0.2s;
 }
 
-.key-space:hover {
+.key-space-light {
+  color: #3b3b3b;
+  border: 2px solid #3b3b3b;
+}
+
+.key-space-pink:hover {
   background: #fff;
   color: #ff84b1;
 }
 
-.key-space-pressed {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.key-space-light:hover {
+  background: #3b3b3b;
+  color: #fff;
+}
 
+.key-space-pressed-pink {
   background: #fff;
   color: #ff84b1;
-
-  width: 58%;
-  height: 50px;
-
   border: 2px solid #ffffff;
-  box-sizing: border-box;
-  border-radius: 8px;
+}
 
-  font-family: "Fira Code", monospace;
-  cursor: pointer;
+.key-space-pressed-light {
+  background: #3b3b3b;
+  color: #fff;
+  border: 2px solid #3b3b3b;
+}
 
-  transition: 0.2s;
+@media (max-width: 1366px) {
+  .input-text-light,
+  .input-text-pink {
+    width: 75%;
+  }
+
+  .key-container-pink,
+  .key-container-light {
+    padding: 15px;
+  }
+
+  .firstline {
+    font-size: 13px;
+  }
+
+  .key-pink,
+  .key-light,
+  .key-pressed-pink,
+  .key-pressed-light {
+    width: 45px;
+    height: 45px;
+  }
+
+  .key-backspace-pink,
+  .key-backspace-light {
+    width: 90px;
+    height: 45px;
+  }
+  .key-shift-pink,
+  .key-shift-light {
+    width: 100px;
+    height: 45px;
+  }
+
+  .key-capslock-pink,
+  .key-capslock-light {
+    width: 80px;
+    height: 45px;
+  }
+
+  .key-tab-pink,
+  .key-tab-light {
+    width: 65px;
+    height: 45px;
+  }
+
+  .key-backlash-pink,
+  .key-backlash-light,
+  .key-backlash-pressed-pink,
+  .key-backlash-pressed-light {
+    width: 65px;
+    height: 45px;
+  }
+
+  .key-windows-pink,
+  .key-windows-light {
+    width: 55px;
+    height: 45px;
+  }
+
+  .key-ctrl-pink,
+  .key-ctrl-light {
+    width: 60px;
+    height: 45px;
+  }
+
+  .key-space-pink,
+  .key-space-light,
+  .key-space-pressed-pink,
+  .key-space-pressed-light {
+    width: 58%;
+    height: 45px;
+  }
+
+  .input-text-light,
+  .input-text-pink {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
 }

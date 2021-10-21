@@ -1,0 +1,146 @@
+#theme-container-pink {
+  background: linear-gradient(180deg, #ffbed7 0%, #f79dbe 30.24%, #ff84b1 100%);
+}
+
+#theme-container-light {
+  background: linear-gradient(
+    180deg,
+    #d2d2d2 0%,
+    #e2e2e2 0.01%,
+    #f2f2f2 50.24%,
+    #ffffff 99.2%
+  );
+}
+
+.theme-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-header-pink,
+.theme-header-light {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: "Fira Code", monospace;
+  font-size: 24px;
+}
+
+.theme-header-pink {
+  color: #fff;
+}
+
+.theme-header-light {
+  color: #3b3b3b;
+}
+
+.theme-main {
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close-button-left {
+  opacity: 0;
+  cursor: default;
+}
+
+.close-button-pink,
+.close-button-light {
+  display: flex;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-size: 20px;
+  font-family: "Fira Code", monospace;
+  background: none;
+}
+
+.close-button-pink {
+  color: #fff;
+  border: 2.5px solid #ffffff;
+}
+
+.close-button-light {
+  color: #3b3b3b;
+  border: 2.5px solid #3b3b3b;
+}
+
+.close-button-pink:hover {
+  background: #fff;
+  color: #f79dbe;
+}
+
+.close-button-light:hover {
+  background: #3b3b3b;
+  color: #fff;
+}
+
+.theme-option-pink,
+.theme-option-light {
+  display: flex;
+  flex-direction: column;
+  max-height: 180px;
+  max-width: 200px;
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  background: transparent;
+
+  font-family: "Fira Code", monospace;
+  font-size: 25px;
+  font-weight: 300;
+
+  transition: 0.2s;
+}
+
+.theme-option-pink {
+  border: 2px solid #ffffff;
+  color: #fff;
+}
+
+.theme-option-light {
+  border: 2px solid #3b3b3b;
+  color: #3b3b3b;
+}
+
+.theme-option-pink {
+  color: #fff;
+}
+
+.theme-option-light {
+  color: #3b3b3b;
+}
+
+.theme-option-pink:hover {
+  background: #fff;
+  color: #ff84b1;
+}
+
+.theme-option-light:hover {
+  background: #3b3b3b;
+  color: #fff;
+}
