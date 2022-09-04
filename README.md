@@ -7,7 +7,11 @@
 # 
 
 <div align="center">
-  <span>You can try: </span><a href="https://typingtest-react.vercel.app/" target="_blank" rel="noopener noreferrer">https://typingtest-react.vercel.app/</a>
+  <span>You can try:</span>
+  <br>
+  <a href="https://typingtest-react.vercel.app/" target="_blank" rel="noopener noreferrer"> https://typingtest-react.vercel.app/</a>
+  <br>
+  <br/>
   <img src="./images/testing.gif" width="800px"/>
 </div>
 
